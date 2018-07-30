@@ -111,7 +111,7 @@ for(x in 1:17568){
 ```
 Make a panel plot containing a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 
-```{r time_series}
+```{r time_series2}
 data_aggr_mean_day <- aggregate(dayweek$steps ~ dayweek$interval + dayweek$levels, FUN = "mean")
 xyplot(data_aggr_mean_day$`dayweek$steps` ~ data_aggr_mean_day$`dayweek$interval` | data_aggr_mean_day$`dayweek$levels`, layout = c(1,2), type="l", ylab="Steps (average)", xlab="Intervals (5 minutes", main = "Weekdays VS. Weekends")
 ```
